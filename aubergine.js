@@ -9,11 +9,11 @@ aubergine.on('ready', () => {
 aubergine.on("message", (message) => {
 
 	let arg = (message.content.split(" ").slice(1))[0];
-	user = aubergine.users.find(u => u.username == arg);
+	user = aubergine.users.find(u => u.username === arg);
 
 	function postMessageMention(arg1, arg2, arg3) {
 		if (message.content.startsWith(arg1)) {
-			if (arg == null)
+			if (arg === null)
 				message.channel.send(arg2[Math.floor(Math.random() * arg2.length)]);
 			else
 				message.channel.send(arg + " " + arg3);
@@ -31,19 +31,21 @@ aubergine.on("message", (message) => {
 	}
 
 
-	kinemu = aubergine.users.find(u => u.username == "Kinemu");
-	eggplant = [":eggplant:", "pik@, reine l'aubergine :eggplant:", (kinemu + " :eggplant:"), "Aubergine!", ":regional_indicator_a: :regional_indicator_u: :regional_indicator_b: :regional_indicator_e: :regional_indicator_r: :regional_indicator_g: :regional_indicator_i: :regional_indicator_n: :regional_indicator_e:"]
-	banana = [":banana:", "pik@, reine de la banane :eggplant:", "Banane!", ":regional_indicator_b: :regional_indicator_a: :regional_indicator_n: :regional_indicator_a: :regional_indicator_n: :regional_indicator_a:"]
-	kebab = ["🥙", "Kebab <3", ":regional_indicator_k: :regional_indicator_e: :regional_indicator_b: :regional_indicator_a: :regional_indicator_b:"]
-	pasta = [":spaghetti:", "Pasta <3", ":regional_indicator_p: :regional_indicator_a: :regional_indicator_s: :regional_indicator_t: :regional_indicator_a:"]
+	kinemu = aubergine.users.find(u => u.username === "Kinemu");
+    eggplant = [":eggplant:", "pik@, reine l'aubergine :eggplant:", kinemu + " :eggplant:", "Aubergine!", ":regional_indicator_a: :regional_indicator_u: :regional_indicator_b: :regional_indicator_e: :regional_indicator_r: :regional_indicator_g: :regional_indicator_i: :regional_indicator_n: :regional_indicator_e:"];
+    banana = [":banana:", "pik@, reine de la banane :eggplant:", "Banane!", ":regional_indicator_b: :regional_indicator_a: :regional_indicator_n: :regional_indicator_a: :regional_indicator_n: :regional_indicator_a:"];
+    kebab = ["🥙", "Kebab <3", ":regional_indicator_k: :regional_indicator_e: :regional_indicator_b: :regional_indicator_a: :regional_indicator_b:"];
+    pasta = [":spaghetti:", "Pasta <3", ":regional_indicator_p: :regional_indicator_a: :regional_indicator_s: :regional_indicator_t: :regional_indicator_a:"];
 	tacos = ["Tacos < Kebab"];
 
-	lassalle = ["http://imgur.com/a/QazsT", "http://imgur.comA/a/nSKXs", "http://imgur.com/a/tPgPW", "http://imgur.com/a/uigG1", "http://imgur.com/a/OxBtR", "http://imgur.com/a/8SLlc", "http://imgur.com/a/ynXGP", "http://imgur.com/a/lbHED", "http://imgur.com/a/qm8BO", "http://imgur.com/a/B3FpF", "http://imgur.com/a/bThkT", "http://imgur.com/a/8ZFEI", "http://imgur.com/a/nWtIC", "http://imgur.com/a/UjtqU"]
-	poutou = ["https://www.youtube.com/watch?v=F8QH-w6g7ms", "http://imgur.com/a/5Jt0M", "http://imgur.com/a/kZbl8", "http://imgur.com/a/uqMgN", "http://imgur.com/a/LHgre", "http://imgur.com/a/4CXDA", "http://imgur.com/a/9rI7U", "http://imgur.com/a/Ogsox", "http://imgur.com/a/3lwBo", "http://imgur.com/a/UVSLK", "http://imgur.com/a/VHxUH", "http://imgur.com/a/s7enc", "http://imgur.com/a/u5mhU"]
+    lassalle = ["http://imgur.com/a/QazsT", "http://imgur.comA/a/nSKXs", "http://imgur.com/a/tPgPW", "http://imgur.com/a/uigG1", "http://imgur.com/a/OxBtR", "http://imgur.com/a/8SLlc", "http://imgur.com/a/ynXGP", "http://imgur.com/a/lbHED", "http://imgur.com/a/qm8BO", "http://imgur.com/a/B3FpF", "http://imgur.com/a/bThkT", "http://imgur.com/a/8ZFEI", "http://imgur.com/a/nWtIC", "http://imgur.com/a/UjtqU"];
+    poutou = ["https://www.youtube.com/watch?v=F8QH-w6g7ms", "http://imgur.com/a/5Jt0M", "http://imgur.com/a/kZbl8", "http://imgur.com/a/uqMgN", "http://imgur.com/a/LHgre", "http://imgur.com/a/4CXDA", "http://imgur.com/a/9rI7U", "http://imgur.com/a/Ogsox", "http://imgur.com/a/3lwBo", "http://imgur.com/a/UVSLK", "http://imgur.com/a/VHxUH", "http://imgur.com/a/s7enc", "http://imgur.com/a/u5mhU"];
 
-	duck = ["COIN COIN", ":duck:", ":regional_indicator_d: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k:"]
-	lovelive = ["https://www.youtube.com/watch?v=nvPv-lcPZbY", "https://www.youtube.com/watch?v=hjB5QB54ZAw", "https://www.youtube.com/watch?v=RwqvrGaGXDI", "https://www.youtube.com/watch?v=MutLiEwJpt0", "https://www.youtube.com/watch?v=nORjYWsNlC0", "https://www.youtube.com/watch?v=v5KFcRuSe2M", "https://www.youtube.com/watch?v=MIEtGBlHr-U", "https://www.youtube.com/watch?v=OyPtr_hh9e8", "https://www.youtube.com/watch?v=2wyqHSyzCLk", "https://www.youtube.com/watch?v=jT8CHAQ0c2Q", "https://www.youtube.com/watch?v=z0xFPrjQOcY", "https://www.youtube.com/watch?v=rjf4NNU-JqA", "https://www.youtube.com/watch?v=7ZuPAmktbNM", "https://www.youtube.com/watch?v=sonFpwBvMbM", "https://www.youtube.com/watch?v=XzQ-jMeB8GA", "https://www.youtube.com/watch?v=Ae_94w5gK2s", "https://www.youtube.com/watch?v=Vu4pBRC7W3g"]
-	snowhalation = ["https://www.youtube.com/watch?v=g1p5eNOsl7I", "https://www.youtube.com/watch?v=kjO0eSLa75g", "https://www.youtube.com/watch?v=TN3w-mxwoYE", "https://www.youtube.com/watch?v=Ulnbjqf0Os0", "https://www.youtube.com/watch?v=v_UaC0otbKE", "https://www.youtube.com/watch?v=8-XQrVHKc6I", "https://www.youtube.com/watch?v=cdoaqFHlB7M", "https://www.youtube.com/watch?v=Aa1c4-hNLXI"]
+    denis = ["https://www.youtube.com/watch?v=XE6YaLtctcI", "https://image.noelshack.com/fichiers/2017/07/1487425091-denis.jpg", "https://adeledebrief.files.wordpress.com/2012/04/denispapier.jpg?w=584http://img1.closermag.fr/var/closermag/storage/images/video/quand-un-micro-etait-planque-dans-le-totem-de-koh-lanta-denis-brogniart-raconte-709407/5632979-1-fre-FR/Un-micro-planque-dans-le-totem-de-Koh-Lanta-Denis-Brogniart-raconte-zapping_exact540x405_l.jpg" ];
+
+    duck = ["COIN COIN", ":duck:", ":regional_indicator_d: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k:"];
+    lovelive = ["https://www.youtube.com/watch?v=nvPv-lcPZbY", "https://www.youtube.com/watch?v=hjB5QB54ZAw", "https://www.youtube.com/watch?v=RwqvrGaGXDI", "https://www.youtube.com/watch?v=MutLiEwJpt0", "https://www.youtube.com/watch?v=nORjYWsNlC0", "https://www.youtube.com/watch?v=v5KFcRuSe2M", "https://www.youtube.com/watch?v=MIEtGBlHr-U", "https://www.youtube.com/watch?v=OyPtr_hh9e8", "https://www.youtube.com/watch?v=2wyqHSyzCLk", "https://www.youtube.com/watch?v=jT8CHAQ0c2Q", "https://www.youtube.com/watch?v=z0xFPrjQOcY", "https://www.youtube.com/watch?v=rjf4NNU-JqA", "https://www.youtube.com/watch?v=7ZuPAmktbNM", "https://www.youtube.com/watch?v=sonFpwBvMbM", "https://www.youtube.com/watch?v=XzQ-jMeB8GA", "https://www.youtube.com/watch?v=Ae_94w5gK2s", "https://www.youtube.com/watch?v=Vu4pBRC7W3g"];
+    snowhalation = ["https://www.youtube.com/watch?v=g1p5eNOsl7I", "https://www.youtube.com/watch?v=kjO0eSLa75g", "https://www.youtube.com/watch?v=TN3w-mxwoYE", "https://www.youtube.com/watch?v=Ulnbjqf0Os0", "https://www.youtube.com/watch?v=v_UaC0otbKE", "https://www.youtube.com/watch?v=8-XQrVHKc6I", "https://www.youtube.com/watch?v=cdoaqFHlB7M", "https://www.youtube.com/watch?v=Aa1c4-hNLXI"];
 
 	
 	postMessageMention("!aubergine", eggplant, ":eggplant:");
@@ -57,8 +59,9 @@ aubergine.on("message", (message) => {
 	postMessage("!ppp", "PPP! https://www.youtube.com/watch?v=q5vwy1ED36I");
 	postMessage("!donkeykong", "https://www.youtube.com/watch?v=kA5Wc1_Zghk");
 	postRandomMessage("!lassalle", lassalle);
-	postRandomMessage("!poutou", poutou);
+    postRandomMessage("!poutou", poutou);
+    postRandomMessage("!denis", denis);
 	postRandomMessage("!lovelive", lovelive);
 	postRandomMessage("!snowhalation", snowhalation);
-	postMessage("!help", "Available commands: !aubergine, !pasta, !banane, !duck, !kebab, !tacos, !pomme, !kemono, !ppp, !donkeykong, !lassalle, !poutou, !lovelive, !snowhalation");
+    postMessage("!help", "Available commands: !aubergine, !pasta, !banane, !duck, !kebab, !tacos, !pomme, !kemono, !ppp, !donkeykong, !lassalle, !poutou, !lovelive, !snowhalation, !denis");
 });
