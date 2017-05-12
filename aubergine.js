@@ -13,7 +13,7 @@ aubergine.on("message", (message) => {
 
 	function postMessageMention(arg1, arg2, arg3) {
 		if (message.content.startsWith(arg1)) {
-			if (arg === null)
+			if (arg == null)
 				message.channel.send(arg2[Math.floor(Math.random() * arg2.length)]);
 			else
 				message.channel.send(arg + " " + arg3);
