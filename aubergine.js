@@ -43,7 +43,7 @@ aubergine.on("message", (message) => {
     function parseMessage() {
         var splitMessage = message.content.split(" ");
         var command = splitMessage[0];
-        var fullCommandObject = commands.find(cmd => cmd.key === command);
+        var fullCommandObject = commands.find(cmd => cmd.key === command.toLocaleLowerCase());
         if (fullCommandObject !== undefined) {
             var finalMessage = composeMessage(fullCommandObject, splitMessage);
             sendMessage(finalMessage);
@@ -72,8 +72,9 @@ aubergine.on("message", (message) => {
         { key: "!lassalle", value: ["http://imgur.com/a/QazsT", "http://imgur.comA/a/nSKXs", "http://imgur.com/a/tPgPW", "http://imgur.com/a/uigG1", "http://imgur.com/a/OxBtR", "http://imgur.com/a/8SLlc", "http://imgur.com/a/ynXGP", "http://imgur.com/a/lbHED", "http://imgur.com/a/qm8BO", "http://imgur.com/a/B3FpF", "http://imgur.com/a/bThkT", "http://imgur.com/a/8ZFEI", "http://imgur.com/a/nWtIC", "http://imgur.com/a/UjtqU"] },
         { key: "!poutou", value: ["https://www.youtube.com/watch?v=F8QH-w6g7ms", "http://imgur.com/a/5Jt0M", "http://imgur.com/a/kZbl8", "http://imgur.com/a/uqMgN", "http://imgur.com/a/LHgre", "http://imgur.com/a/4CXDA", "http://imgur.com/a/9rI7U", "http://imgur.com/a/Ogsox", "http://imgur.com/a/3lwBo", "http://imgur.com/a/UVSLK", "http://imgur.com/a/VHxUH", "http://imgur.com/a/s7enc", "http://imgur.com/a/u5mhU"] },
 
-        //help command
-        { key: "!help", value: ["Available commands: !aubergine, !pasta, !banane, !duck, !kebab, !tacos, !pomme, !kemono, !ppp, !donkeykong, !lassalle, !poutou, !lovelive, !snowhalation, !denis"] }
+        //helpful commands
+        { key: "!help", value: ["Available commands: !aubergine, !pasta, !banane, !duck, !kebab, !tacos, !pomme, !kemono, !ppp, !donkeykong, !lassalle, !poutou, !lovelive, !snowhalation, !denis"] },
+        { key: "!repo", value: ["Github repository link : https://github.com/ZetaKebab/aubergine-bot"] }
     ];
 
     parseMessage();
