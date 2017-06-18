@@ -67,14 +67,15 @@ aubergine.on("message", (message) => {
         { key: "!tacos", hasToMention: true, value: ["Tacos < Kebab"], endMessageWith: "🌮" },
 
         //Politicians and other famous people
+        { key: "!eddy", value: ["http://imgur.com/epdORBw", "http://imgur.com/se1osyw", "http://imgur.com/4eqOQsF", "http://imgur.com/IHPXWxI", "http://imgur.com/FQcmJL2", "http://imgur.com/qr8uSjo", "http://imgur.com/xCuFS5P", "http://imgur.com/hwoFWVx", "http://imgur.com/J0lKoaO", "http://imgur.com/tLjagVB", "http://imgur.com/eZI3aN9"] },
         { key: "!denis", value: ["https://www.youtube.com/watch?v=XE6YaLtctcI", "http://imgur.com/UYqXdHG", "http://imgur.com/WoaK37g", "http://imgur.com/syvl6Qh", "http://imgur.com/eoHmqjU", "http://imgur.com/1PGQyqE", "http://imgur.com/CfcWTAS", "http://imgur.com/wSQXwCf", "http://imgur.com/liwQI7F", "http://imgur.com/X5lyo4I", "http://imgur.com/WLtPOkc", "http://imgur.com/m9e7jSO"] },
+        { key: "!durif", value: ["http://imgur.com/mpc6wwy", "http://imgur.com/OxEuxiM", "http://imgur.com/5h2404F", "http://imgur.com/9Fzn8Vd", "http://imgur.com/1BX2Rws", "http://imgur.com/3SWwvyV", "http://imgur.com/PvT9LUr", "http://imgur.com/WtwLfi8", "http://imgur.com/C8qaY9F"] },
         { key: "!julien", value: ["https://www.youtube.com/watch?v=rjoF65L0Mzw", "http://imgur.com/dMgTAzk", "http://imgur.com/XuL4DwG", "http://imgur.com/IWb4vNv", "http://imgur.com/8kM5tVl", "http://imgur.com/SQMlikN", "http://imgur.com/f8WVY5Z", "http://imgur.com/spfdxxw", "http://imgur.com/GlfZpKO", "http://imgur.com/rIiKfCk", "http://imgur.com/rIiKfCk", "http://imgur.com/JLA15r0", "http://imgur.com/sWdhPOr", "http://imgur.com/31dds8K", "http://imgur.com/Q5aHmoI", "https://www.youtube.com/watch?v=D7TNphER37g"] },
         { key: "!lassalle", value: ["http://imgur.com/a/QazsT", "http://imgur.comA/a/nSKXs", "http://imgur.com/a/tPgPW", "http://imgur.com/a/uigG1", "http://imgur.com/a/OxBtR", "http://imgur.com/a/8SLlc", "http://imgur.com/a/ynXGP", "http://imgur.com/a/lbHED", "http://imgur.com/a/qm8BO", "http://imgur.com/a/B3FpF", "http://imgur.com/a/bThkT", "http://imgur.com/a/8ZFEI", "http://imgur.com/a/nWtIC", "http://imgur.com/a/UjtqU"] },
         { key: "!poutou", value: ["https://www.youtube.com/watch?v=F8QH-w6g7ms", "http://imgur.com/a/5Jt0M", "http://imgur.com/a/kZbl8", "http://imgur.com/a/uqMgN", "http://imgur.com/a/LHgre", "http://imgur.com/a/4CXDA", "http://imgur.com/a/9rI7U", "http://imgur.com/a/Ogsox", "http://imgur.com/a/3lwBo", "http://imgur.com/a/UVSLK", "http://imgur.com/a/VHxUH", "http://imgur.com/a/s7enc", "http://imgur.com/a/u5mhU"] },
-        { key: "!durif", value: ["http://imgur.com/mpc6wwy", "http://imgur.com/OxEuxiM", "http://imgur.com/5h2404F", "http://imgur.com/9Fzn8Vd", "http://imgur.com/1BX2Rws", "http://imgur.com/3SWwvyV", "http://imgur.com/PvT9LUr", "http://imgur.com/WtwLfi8"] },
 
         //helpful commands
-        { key: "!help", value: ["Available commands: !aubergine, !pasta, !banane, !duck, !kebab, !tacos, !pomme, !kemono, !ppp, !donkeykong, !lassalle, !poutou, !lovelive, !snowhalation, !denis"] },
+        { key: "!help", value: ["Available commands: !aubergine, !pasta, !banane, !duck, !kebab, !tacos, !pomme, !kemono, !ppp, !donkeykong, !lassalle, !poutou, !lovelive, !snowhalation, !denis, !julien, !durif, !eddy, !repo"] },
         { key: "!repo", value: ["Github repository link : https://github.com/ZetaKebab/aubergine-bot"] }
     ];
 
